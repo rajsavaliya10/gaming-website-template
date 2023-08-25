@@ -312,6 +312,13 @@ header{
     -ms-transform: scale(0.8);
     transform: scale(0.8);
 }
+img.slick-slide.slick-current.slick-active.slick-center{
+    scale: 1.1;
+}
+img.slick-slide {
+    padding-block: 45px;
+    padding-left: 43px;
+}
 .shop-ring .slick-slide .slick-active .slick-center {
     -moz-transform: scale(1);
     -webkit-transform: scale(1);
