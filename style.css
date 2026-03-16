@@ -1,0 +1,2092 @@
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2D1E6B;
+}
+
+.container {
+    display: block;
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.tablet-view {
+    display: none;
+}
+
+.mobile-view {
+    display: none !important;
+}
+
+.section-alt-mobile {
+    display: none;
+}
+
+.highlight {
+    display: inline-block;
+    background: url(image/font-bg.png) no-repeat center center/cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-heading {
+    /* font-family: "Ondo", sans-serif; */
+    font-family: "Open Sans", sans-serif;
+    font-size: 66px;
+    color: #FFFFFF;
+    font-weight: 800;
+    text-align: center;
+    line-height: 76px;
+    letter-spacing: 2.6px;
+    margin: 20px auto 10px;
+}
+
+.section-heading .left-align {
+    position: relative;
+    left: -135px;
+}
+
+.descriptive-font {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.64px;
+    color: #ffffff;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/lato/v25/S6uyw4BMUTPHjx4wXg.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh6UVSwiPGQ.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: "Ondo";
+    src: url(font/jam-type-design-ondo-demo-medium.otf) format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* header */
+
+.header-section {
+    position: relative;
+    width: 100%;
+    /* padding: 85px 0 0; */
+    padding: 45px 0 0;
+}
+
+.header-section::before {
+    position: absolute;
+    content: '';
+    max-width: 100%;
+    width: 700px;
+    height: 800px;
+    left: -22%;
+    top: 174%;
+    transform: translateY(-50%);
+    background: radial-gradient(circle, rgba(255, 0, 200, 0.7) 0%, rgba(140, 0, 255, 0.5) 35%, rgba(70, 0, 150, 0.3) 55%, transparent 75%);
+    filter: blur(147px);
+    opacity: 0.9;
+    z-index: -1;
+}
+
+.header-section .container {
+    max-width: 1269px;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 0;
+}
+
+.header-inner a {
+    color: #FFFFFF;
+}
+
+.header-logo {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    padding: 0 100px 0 0;
+}
+
+.logo a img {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+}
+
+.header-logo h2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 31px;
+    font-weight: 800;
+}
+
+.header-nav ul {
+    display: flex;
+    gap: 40px;
+}
+
+.header-nav ul li:first-child a {
+    font-weight: 700;
+}
+
+.header-nav a {
+    font-family: 'Lato', sans-serif;
+    transition: all 0.8s ease-in-out;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 111%;
+    letter-spacing: 4%;
+    text-transform: uppercase;
+}
+
+.header-nav a:hover {
+    color: #DD00B8;
+}
+
+.header-cart {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.fa-solid,
+.fa-bag-shopping {
+    font-size: 14px !important;
+}
+
+/* sidebar */
+
+.sidebar {
+    position: fixed !important;
+    max-width: 238px;
+    width: 100%;
+    height: 84%;
+    background: linear-gradient(180deg, rgba(210, 5, 104, 0.564) 0%, rgba(6, 6, 208, 0.824) 100%);
+    border-radius: 2px;
+    top: 16%;
+    right: -260px;
+    z-index: 5;
+    transition: all 0.4s ease-in-out;
+}
+
+#menu-toggle:checked~.sidebar {
+    right: 15px;
+}
+
+.sidebar ul li a {
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    color: #FFFFFF;
+    font-size: 16px;
+    transition: all 0.5s ease-in-out;
+    padding: 14px 16px;
+    text-transform: uppercase;
+}
+
+.sidebar ul li:first-child {
+    font-weight: 800;
+}
+
+.sidebar ul li a:hover {
+    color: #DD00B8;
+}
+
+/* hero-section */
+
+.hero-section {
+    /* background: url(image/bg-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 165%;
+    mix-blend-mode: color-dodge; */
+    padding: 119px 0 0;
+    width: 100%;
+    position: relative;
+}
+
+.hero-bg-img {
+    position: relative;
+}
+
+.hero-bg-img::before {
+    position: absolute;
+    content: '';
+    background-image: url(image/bg-img.png);
+    mix-blend-mode: color-dodge;
+    position: absolute;
+    top: -22%;
+    width: 100%;
+    height: 826px;
+    background-size: cover;
+}
+
+.blur-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.blur-background img {
+    width: 100%;
+    height: 100%;
+}
+
+.blur-background.right-side-bg {
+    position: absolute;
+    right: 0;
+    top: -174%;
+}
+
+.game-showcase .blur-background {
+    bottom: 0 !important;
+    z-index: -1;
+}
+
+ul.game-item li::marker {
+    color: transparent;
+}
+
+.hero-detail {
+    max-width: 50%;
+}
+
+.main-heading {
+    font-family: "Ondo", sans-serif;
+    font-weight: 800;
+    font-size: 69px;
+    line-height: 76px;
+    color: #FFFFFF;
+    max-width: 95%;
+    letter-spacing: 4%;
+    border-radius: 50px;
+}
+
+.hero-text {
+    font-family: 'Lato', sans-serif;
+    color: #FFFFFF;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 35.15px;
+    max-width: 96%;
+    padding: 23px 0px 42px;
+}
+
+.banner-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.banner-buttons a {
+    display: inline-block;
+}
+
+.primary-button {
+    display: inline-block;
+    background: url(image/btn-background.png) no-repeat center center/cover;
+    background-position: 100% 100%;
+    clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
+    /* background: url(image/font-bg.png); */
+}
+
+
+.primary-button a {
+    padding: 23.4px 66px;
+    /* background: #2D1E6B; */
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
+}
+
+.secondary-button {
+    display: inline-flex;
+    /* padding: 24px 58px; */
+    padding: 22.7px 57.3px;
+    font-size: 20px;
+    font-weight: 800;
+    font-family: Arial, sans-serif;
+    background: url(image/btn-border.png) no-repeat center center/contain;
+}
+
+.secondary-button span {
+    background-image: url(image/btn-background.png);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.achievement-number {
+    font-family: "Ondo";
+    color: #FFFFFF;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.achievement-number span {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.achievement-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 18.7px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 20px;
+}
+
+.achievement-cards {
+    display: flex;
+    gap: 31px;
+    align-items: center;
+    padding: 66px 0 89px;
+}
+
+.achievement-card {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+}
+
+/* scroll-bar-section */
+
+.scroll-bar-section {
+    overflow: hidden;
+    backdrop-filter: blur(25px);
+}
+
+.rotate-wrapper {
+    /* background: url(image/marquee-bg.png); */
+    transform: rotate(-1.98deg);
+    /* backdrop-filter: blur(50px); */
+    box-shadow: 0px 4px 20px -1px #00000000;
+    width: 100%;
+    margin: 50px 0;
+    /* padding: 20px 0; */
+    /* border: 1px solid #FFFFFF33; */
+}
+
+.primary-marquee.rotate-marquee {
+    background: url(image/header-marquee-bg.png);
+    backdrop-filter: none;
+    padding: 0;
+    border: none;
+    margin: -56px 0;
+}
+
+.primary-marquee {
+    position: relative;
+    z-index: 1;
+    /* border: 1px solid #FFFFFF33; */
+    padding: 27px 0;
+    margin: 0 0 -35px;
+    background: url(image/footer-marquee-bg.png);
+    background-size: cover;
+}
+
+.secondary-marquee {
+    padding: 0;
+}
+
+.scroll-bar-section.secondary-marquee p {
+    font-size: 37px;
+}
+
+.scroll-bar-section .container {
+    padding: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+/* 
+.rotate-marquee .scroll-bar-track {
+    animation: scroll-bar 20s linear infinite;
+} */
+
+.scroll-bar-track {
+    display: flex;
+    width: max-content;
+    white-space: nowrap;
+    animation: scroll-bar 20s linear infinite;
+}
+
+.marquee-item {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin-right: 40px;
+}
+
+.scroll-content {
+    display: flex;
+}
+
+@keyframes scroll-bar {
+    0% {
+        transform: translatex(0%);
+    }
+
+    100% {
+        transform: translatex(-50%);
+    }
+}
+
+.marquee-item img {
+    /* width: 100%; */
+    max-width: 37px;
+    height: 41px;
+}
+
+.marquee-item p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 110%;
+    color: #FFFFFF;
+}
+
+/* games-section */
+
+.games-section {
+    position: relative;
+    /* padding: 97px 0 111px; */
+    padding: 130px 0 111px;
+    overflow: hidden;
+}
+
+.games-section::before {
+    content: "";
+    position: absolute;
+    width: 620px;
+    height: 1020px;
+    left: -197px;
+    top: -15%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(221, 0, 184, 0.9) 0%, rgba(221, 0, 184, 0.4) 40%, transparent 70%);
+    filter: blur(279px);
+    z-index: -1;
+}
+
+.games-section .container {
+    max-width: 1920px;
+    padding: 0;
+}
+
+.games-intro {
+    max-width: 52%;
+    margin: 0 auto;
+}
+
+.games-intro .blur-background {
+    top: -52%;
+}
+
+.games-intro .descriptive-font {
+    max-width: 72%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.games-slider {
+    padding: 40px 0 0;
+    width: 100%;
+}
+
+.game-slide img {
+    width: 100%;
+    display: block;
+}
+
+.slick-slide img {
+    /* margin: 0 auto; */
+    margin: 2px auto;
+}
+
+.games-slider .slick-slide {
+    opacity: 1;
+    transition: all 0.4s ease;
+    transform: scale(0.9);
+    padding: 11px;
+}
+
+.games-slider .slick-center {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.games-section .banner-buttons {
+    padding: 71px 0 0;
+    justify-content: center;
+}
+
+.games-section .primary-button a {
+    padding: 23.4px 68px;
+}
+
+.games-section .primary-button a:hover {
+    background: -webkit-linear-gradient(66deg, #FF00D4 42%, #D6D6D6 50%, #1626FF 85%);
+    color: #23527c;
+}
+
+.games-slider .slick-list {
+    padding: 40px 0;
+    margin: 0 -29px;
+}
+
+.game-author img {
+    margin: 0;
+}
+
+/* virtual-section */
+
+.virtual-section {
+    position: relative;
+    padding: 0 0 86px;
+}
+
+.virtual-section::before {
+    position: absolute;
+    content: '';
+    width: 336px;
+    height: 1200px;
+    top: -15%;
+    right: 0;
+    z-index: -1;
+    margin: -300px 0 0px;
+    background: radial-gradient(circle, rgba(221, 0, 184, 0.9) 0%, rgba(221, 0, 184, 0.4) 40%, transparent 70%);
+    filter: blur(283px);
+}
+
+.virtual-section .container {
+    max-width: 1270px;
+}
+
+.virtual-detail .section-heading {
+    font-size: 48px;
+    text-align: left;
+    line-height: 55.68px;
+    letter-spacing: 1.92px;
+    margin: 0;
+}
+
+.virtual-detail {
+    display: flex;
+    align-items: center;
+    background: url(image/virtual-section-bg.png);
+    background-size: cover;
+    border: 1px solid #FFFFFF33;
+    border-radius: 10px;
+}
+
+.section-image {
+    max-width: 60%;
+}
+
+.section-image img {
+    max-width: 725px;
+    width: 100%;
+    margin: -100px 0px -24px;
+}
+
+.section-description {
+    max-width: 40%;
+    padding: 65px 0 82px;
+    margin: 0px 0 0 -47px;
+}
+
+.virtual-detail .descriptive-font {
+    max-width: 492px;
+    padding: 12px 0 35px;
+}
+
+.virtual-detail .secondary-button a {
+    display: inline-block;
+}
+
+/* game-showcase */
+
+.game-showcase {
+    position: relative;
+    padding: 110px 0 108px;
+}
+
+.game-showcase::before {
+    position: absolute;
+    content: '';
+    background-repeat: no-repeat;
+    width: 472px;
+    height: 928px;
+    bottom: -21%;
+    left: -3%;
+    z-index: -1;
+    background: radial-gradient(circle, rgba(221, 0, 184, 0.9) 0%, rgba(221, 0, 184, 0.4) 40%, transparent 70%);
+    filter: blur(265px);
+}
+
+.game-showcase .container {
+    max-width: 1275px;
+}
+
+.game-showcase .section-heading {
+    font-family: ondo;
+    max-width: 787px;
+    position: relative;
+    padding: 0 0 65px;
+}
+
+.section-heading .left-align {
+    position: absolute;
+    left: 188px;
+    top: 74px;
+}
+
+.games-gallery {
+    padding: 38px 0 0;
+}
+
+.games-gallery .banner-buttons {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 77px;
+    flex-wrap: wrap;
+    gap: 30px 0;
+}
+
+.tab-item {
+    position: relative;
+    padding: 1px;
+    background: linear-gradient(90deg, #4d2bff, #ff00cc);
+    clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
+}
+
+.tab-item.active {
+    background: none;
+}
+
+.tab-item a {
+    display: inline-block;
+    padding: 21px 49.44px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    background: #2D1E6B;
+    clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
+}
+
+.tab-item.active a {
+    background: url(image/btn-background.png) no-repeat center center/cover;
+    font-weight: 800;
+    padding: 21px 49px;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 27px;
+}
+
+.game-card {
+    width: 100%;
+    background: url(image/game-card-bg.png) no-repeat;
+    background-size: cover;
+    border: 1px solid #FFFFFF33;
+    border-radius: 10px;
+    padding: 20px 18px 46px;
+}
+
+.game-card-image img {
+    width: 100%;
+}
+
+.game-card-content {
+    padding: 30px 0 0 7px;
+}
+
+.game-title {
+    font-family: Lato;
+    color: white;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 111%;
+    letter-spacing: 3.5%;
+    text-transform: capitalize;
+    padding: 0 0 18px;
+}
+
+.game-author {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.author-name {
+    font-family: Lato;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 111%;
+    letter-spacing: 3.5%;
+    vertical-align: middle;
+    text-transform: capitalize;
+    padding: 0 0 8px;
+}
+
+.author-text {
+    font-family: Lato;
+    color: white;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 111%;
+    letter-spacing: 3.5%;
+    vertical-align: middle;
+    text-transform: capitalize;
+}
+
+.live-demo-btn {
+    display: flex;
+    justify-content: center;
+    font-family: Lato;
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 111%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    text-transform: uppercase;
+    clip-path: polygon(10% 2%, 100% -25%, 90% 100%, -1% 135%);
+    text-decoration: none;
+    background: url(image/btn-background.png) no-repeat center center/cover;
+    padding: 16px 0;
+    margin: 26px 0 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.live-demo-btn:hover {
+    background: linear-gradient(45deg, rgba(49, 11, 233, 1) 30%, rgba(227, 12, 195, 1) 60%);
+    cursor: pointer;
+}
+
+/* review-section  */
+
+.cilent-review .review-slider .review-card:first-child {
+    margin: 0;
+}
+
+.review-section {
+    padding: 60px 0 170px;
+}
+
+.review-section .container {
+    max-width: 1275px;
+}
+
+.cilent-review.slick-initialized.slick-slider {
+    padding: 30px 0;
+}
+
+.review-detail {
+    padding: 0 0 29px;
+}
+
+.review-text {
+    font-family: Lato;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 185%;
+    letter-spacing: 4%;
+    vertical-align: middle;
+}
+
+.reviewer {
+    display: flex;
+    gap: 11.65px;
+    align-items: center;
+}
+
+.review-card.slick-slide {
+    padding: 58px 26px 33px 43px;
+    border-radius: 10px;
+    position: relative;
+    overflow: visible;
+    height: auto;
+    margin: 45px auto 0 !important;
+    border: 0.84px solid #FFFFFF33;
+    background: url(image/review-card-bg.png) no-repeat;
+    background-size: cover;
+}
+
+.cilent-review .slick-track {
+    display: flex !important;
+    gap: 31px;
+}
+
+.cilent-review .slick-slide {
+    height: auto;
+}
+
+.slick-dots li.slick-active {
+    margin: 0 10px 0 0;
+}
+
+.review-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.084) 0%, rgba(217, 217, 217, 0.042) 100%);
+    position: relative;
+    overflow: visible;
+}
+
+.review-card-img {
+    position: absolute;
+    top: -45px;
+    right: 44px;
+}
+
+.rating-img img {
+    margin: 0 0 5px;
+}
+
+.review-footer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 26px 6px 0;
+}
+
+.review-footer::before {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgb(255, 255, 255)0%, rgba(120, 119, 119, 0)100%);
+}
+
+.client-info h3 {
+    font-family: Lato;
+    font-weight: 500;
+    color: white;
+    font-size: 20.97px;
+    line-height: 111%;
+    letter-spacing: 3.5%;
+    vertical-align: middle;
+    text-transform: capitalize;
+    padding: 0 0 9.6px;
+}
+
+.client-info p {
+    font-family: Lato;
+    color: white;
+    font-weight: 500;
+    font-size: 11.65px;
+    line-height: 111%;
+    letter-spacing: 3.5%;
+    vertical-align: middle;
+    text-transform: capitalize;
+}
+
+.verification {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.verification p {
+    font-family: Lato;
+    color: white;
+}
+
+
+.slick-dots li button:before {
+    position: relative !important;
+    display: block;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: -115px !important;
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+.slick-dots li.slick-active button:before {
+    background: url(image/slider-dot-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* background-position: 100% 100%; */
+    width: 35px;
+    height: 35px;
+    content: '';
+    top: -8px;
+    margin: 0 30px 0 0;
+    border-radius: 50%;
+}
+
+.slick-dots li button:before {
+    color: white !important;
+    font-size: 23px !important;
+    opacity: 1 !important;
+}
+
+/* footer */
+
+.footer-section {
+    position: relative;
+    padding: 130px 0 0;
+    background: url(image/footer-bg-img.png);
+    /* background-position: 21% 78%; */
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    mix-blend-mode: color-dodge;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: flex-start;
+    gap: 76px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 93px;
+}
+
+.footer-logo {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+
+.footer-logo h2 {
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    font-size: 31px;
+    font-weight: 800;
+}
+
+.brand-text {
+    font-family: Lato;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 185%;
+    letter-spacing: 4%;
+    vertical-align: middle;
+    max-width: 315px;
+    padding: 33px 0 0;
+}
+
+.footer-column h3 {
+    font-family: Lato;
+    color: white;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 111%;
+    letter-spacing: 4%;
+    vertical-align: middle;
+    text-transform: uppercase;
+    padding: 0 0 26px;
+}
+
+.footer-column ul li a {
+    color: white;
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 111%;
+    letter-spacing: 4%;
+    vertical-align: middle;
+    text-transform: capitalize;
+    padding: 0 0 36px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-column ul li a:hover {
+    color: #DD00B8;
+}
+
+.trusted-brands {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    padding: 30px 0 63px;
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    gap: 29px;
+    padding: 0 0 43px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 12px;
+}
+
+.fa-brands {
+    color: #ffffff;
+    border: 1.34px solid #D4D4D8;
+    border-radius: 50%;
+    padding: 9px;
+    transition: all 0.3s ease-in-out;
+}
+
+img.fa-brands {
+    padding: 9px 12px;
+    max-width: 35.33px;
+    height: 36px;
+}
+
+.fa-brands:hover {
+    background: url(image/font-bg.png) no-repeat center center/cover;
+}
+
+.footer-bottom p {
+    color: white;
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 174%;
+    letter-spacing: 6.5%;
+    vertical-align: middle;
+}
+
+@media screen and (max-width:1240px) {
+
+    .hero-bg-img::before {
+        height: 916px;
+        background-position: 64% 85%;
+    }
+
+}
+
+@media screen and (max-width:1024px) {
+
+    .tablet-view {
+        display: block;
+    }
+
+    .fa-solid,
+    .fa-bag-shopping,
+    .fa-bars {
+        font-size: 17px !important;
+    }
+
+    .section-heading {
+        font-size: 40px;
+        /* max-width: 78%; */
+        max-width: 64%;
+        line-height: 46.4px;
+        letter-spacing: 1.6px;
+    }
+
+    .descriptive-font {
+        font-size: 14px;
+        line-height: 25.9px;
+    }
+
+    .secondary-button {
+        padding: 21px 53.5px;
+    }
+
+    .games-section .primary-button a {
+        padding: 20px 57.5px;
+    }
+
+    /* header */
+
+    .header-section {
+        padding: 11px 0;
+    }
+
+    .header-inner {
+        padding: 0;
+    }
+
+    .header-nav {
+        display: none;
+    }
+
+    .header-inner a {
+        padding: 14px 16px;
+    }
+
+    .header-cart {
+        position: absolute;
+        right: 3.15%;
+    }
+
+    /* hero-section */
+
+    .hero-section {
+        padding: 130px 0;
+        background-position: center;
+    }
+
+    .hero-bg-img::before {
+        height: 935px;
+        background-position: 76% 85%;
+        top: -37%;
+    }
+
+    .hero-detail {
+        max-width: 50%;
+    }
+
+    .main-heading {
+        font-size: 40px;
+        line-height: 55px;
+        max-width: 67%;
+    }
+
+    .hero-text {
+        max-width: 546px;
+        width: 100%;
+        font-size: 17px;
+        line-height: 29px;
+    }
+
+    .primary-button a {
+        font-size: 15px;
+        padding: 20.7px 49.5px;
+    }
+
+    .secondary-button a {
+        font-size: 15px;
+    }
+
+    /* achievement-section  */
+
+    .achievement-number {
+        font-size: 20px;
+    }
+
+    .achievement-text {
+        font-size: 14px;
+    }
+
+    /* scroll-bar-section */
+
+    /* .scroll-bar-section.primary-marquee {
+        /* padding: 13px 0 20px 0 ; 
+        /* padding: 14px 0; 
+    } */
+
+    .primary-marquee .rotate-marquee .container {
+        display: block;
+        max-width: 100% !important;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .fast-marquee .scroll-bar-track {
+        animation: scroll-bar 10s linear infinite;
+    }
+
+    .marquee-item p {
+        font-size: 20px;
+    }
+
+    /* games-section */
+
+    .games-section::before {
+        height: 525px;
+        left: -197px;
+        top: 21%;
+    }
+
+    .games-intro {
+        max-width: 80%;
+    }
+
+    .games-intro .descriptive-font {
+        max-width: 58%;
+    }
+
+    /* virtual-section */
+
+    .virtual-section .container {
+        padding: 0 40px;
+    }
+
+    .virtual-section::before {
+        height: 800px;
+        background-position: 100% 24%;
+    }
+
+    .section-image img {
+        max-width: 656px;
+        height: auto;
+        margin: -66px 0px -4px;
+    }
+
+    .virtual-detail {
+        gap: 15px;
+    }
+
+    .section-description {
+        margin: 0 0 0 -40px;
+        padding: 50px 0 30px;
+    }
+
+    .virtual-detail .section-heading {
+        font-size: 28px;
+        line-height: 32.48px;
+        letter-spacing: 1.12px;
+        margin: 0;
+        padding: 20px 0 10px;
+        max-width: 100%;
+    }
+
+    .virtual-detail .descriptive-font {
+        font-size: 15px;
+        line-height: 22.8px;
+        max-width: 360px;
+    }
+
+    /* game-showcase */
+
+    .game-showcase {
+        padding: 70px 0 100px;
+    }
+
+    .section-heading .left-align {
+        top: 50px;
+    }
+
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 15px;
+    }
+
+    /* .review-section  */
+
+    .review-card-img {
+        top: -28px;
+        right: 25px;
+    }
+
+    .review-card-img img {
+        width: 100%;
+        max-width: 63px;
+    }
+
+    /* footer-section  */
+
+    .footer-content {
+        gap: 50px;
+    }
+
+    .brand-text {
+        font-size: 14px;
+        max-width: 275px;
+    }
+
+    .footer-links {
+        gap: 50px;
+    }
+
+}
+
+@media screen and (max-width:770px) {
+
+    .desktop-view {
+        display: none;
+    }
+
+    .mobile-view {
+        display: flex !important;
+    }
+
+    .section-heading {
+        margin: 20px auto 10px;
+        font-weight: 800;
+        font-size: 34.29px;
+        line-height: 111%;
+        letter-spacing: 4%;
+        max-width: 59%;
+    }
+
+    .primary-button a {
+        font-size: 11.9px;
+        padding: 14px 39.2px;
+    }
+
+    .secondary-button {
+        /* padding: 14px 40.5px; */
+        padding: 14px 34px;
+    }
+
+    .games-section .primary-button a {
+        /* padding: 14px 39.5px; */
+        padding: 14px 41px;
+    }
+
+    .section-alt-mobile .primary-button a {
+        padding: 14px 39.5px;
+    }
+
+    .secondary-button span {
+        font-size: 12px;
+    }
+
+    .rotate-wrapper {
+        padding: 13px 0;
+    }
+
+    /* header */
+
+    .header-section {
+        padding: 41px 0 20px;
+    }
+
+    .header-section .container {
+        padding: 0 31px;
+    }
+
+    .header-inner a {
+        padding: 0;
+    }
+
+    .header-cart {
+        right: 3.15%;
+    }
+
+    .descriptive-font {
+        line-height: 22.4px;
+    }
+
+    .header-logo h2 {
+        font-size: 26px;
+    }
+
+    /* sidebar */
+
+    .sidebar {
+        max-width: 177px;
+        top: 69px;
+    }
+
+    .sidebar ul li a {
+        padding: 13.14px 16px;
+    }
+
+    .slick-dots {
+        gap: 2px !important;
+    }
+
+    /* hero-section */
+
+    .hero-section .container {
+        padding: 0;
+    }
+
+    .hero-bg-img::before {
+        height: 662px;
+        background-position: 73% 94%;
+        top: -75%;
+    }
+
+    .hero-img.mobile-view {
+        display: none !important;
+        mix-blend-mode: color-dodge;
+    }
+
+    .hero-detail {
+        max-width: 100%;
+        flex-direction: column;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .hero-info {
+        /* padding: 0 15px; */
+        padding: 0 25px 0 31px;
+    }
+
+    .main-heading {
+        font-family: "Open Sans", sans-serif;
+        max-width: 341px;
+        line-height: 50px;
+    }
+
+    .hero-text {
+        max-width: 345px;
+        padding: 17px 0 0;
+        font-size: 16px;
+        line-height: 185%;
+        letter-spacing: 4%;
+    }
+
+    .achievement-card {
+        gap: 13px;
+    }
+
+    .achievement-text {
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    /* scroll-bar-section */
+
+    .scroll-bar-section .secondary-marquee {
+        padding: 0;
+    }
+
+    .achievement-cards {
+        padding: 43px 29px 0;
+        gap: 22px;
+        justify-content: center;
+    }
+
+    .rotate-wrapper {
+        margin: 7px 0;
+        /* backdrop-filter: blur(27px);  */
+    }
+
+    .marquee-item p {
+        font-size: 16.6px;
+    }
+
+    .marquee-item img {
+        max-width: 20px;
+        height: auto;
+    }
+
+    .scroll-bar-section.secondary-marquee p {
+        font-size: 18px;
+    }
+
+    /* games-section */
+
+    .games-section {
+        padding: 60px 0 75px;
+    }
+
+    .section-alt-mobile {
+        display: block;
+        padding: 0 0 66px;
+    }
+
+    .banner-buttons {
+        justify-content: center;
+    }
+
+    .primary-button a {
+        background: transparent;
+    }
+
+    .games-section .banner-buttons {
+        padding: 25px 0 0;
+    }
+
+    .games-intro {
+        max-width: 100%;
+    }
+
+    .games-intro .descriptive-font {
+        /* max-width: 342px; */
+        max-width: 413px;
+        width: 100%;
+    }
+
+    .games-slider {
+        padding: 25px 0 0;
+    }
+
+    .games-slider .slick-slide {
+        padding: 11px 3px;
+    }
+
+    /* .virtual-section  */
+
+    .virtual-section {
+        overflow: hidden;
+        padding: 0 0 50px;
+    }
+
+    .virtual-section::before {
+        height: 1000px;
+    }
+
+    .virtual-detail {
+        flex-direction: column-reverse;
+    }
+
+    .section-description {
+        max-width: 77%;
+        padding: 0;
+    }
+
+    .virtual-detail .section-heading {
+        padding: 44px 0 15px;
+    }
+
+    .virtual-detail .descriptive-font {
+        padding: 0 0 26px;
+        max-width: 100%;
+    }
+
+    .section-image img {
+        margin: 0;
+        max-width: 666px;
+        width: 555px;
+        margin: 0 0 -5px -50px;
+    }
+
+    /* game-showcase  */
+
+    .game-showcase {
+        padding: 66px 0 66px;
+        /* padding: 90px 0 66px; */
+    }
+
+    .game-showcase::before {
+        background-position: 4% 63%;
+        margin: 0 0 -26px;
+    }
+
+    .game-showcase .container {
+        padding: 0;
+    }
+
+    .section-heading .left-align {
+        position: absolute;
+        /* left: 95px; */
+        left: 24px;
+        top: 44px;
+    }
+
+    .games-grid {
+        display: block;
+    }
+
+    .games-gallery {
+        padding: 28px 0 0;
+    }
+
+    .game-showcase .section-heading {
+        font-weight: 800;
+        font-size: 34.29px;
+        max-width: 400px;
+        line-height: 111%;
+        letter-spacing: 4%;
+        margin: 0 auto;
+    }
+
+    .games-gallery .banner-buttons {
+        flex-wrap: nowrap;
+        overflow: scroll;
+        justify-content: flex-start;
+        padding: 0 45px 42px;
+    }
+
+    .games-gallery .banner-buttons::-webkit-scrollbar {
+        display: none;
+    }
+
+    .tab-item a {
+        font-size: 11.97px;
+        line-height: 111%;
+        letter-spacing: 4%;
+        max-width: 160px;
+        width: 160px;
+        display: flex;
+        justify-content: center;
+        padding: 14.5px 0;
+    }
+
+    .tab-item.active a {
+        padding: 14.5px 28px;
+    }
+
+    .game-card {
+        margin: 0 26px;
+        padding: 17px 15px 38px;
+        max-width: 332px;
+    }
+
+    .game-card-image img {
+        width: 100%;
+        max-width: 301px;
+    }
+
+    /* reviews-section  */
+
+    .review-section {
+        /* padding: 66px 0 90px; */
+        padding: 25px 0 90px;
+    }
+
+    .scroll-bar-section.primary-marquee {
+        margin: 0 0 -20px;
+        padding: 15px 0;
+    }
+
+    .scroll-bar-section.primary-marquee.rotate-marquee {
+        margin: -37px 0 -20px;
+        background-position: 73% 100%;
+        padding: 8px 0px 19px;
+        background-size: cover;
+    }
+
+    .cilent-review .slick-track {
+        gap: 0;
+    }
+
+    .review-card.slick-slide {
+        max-width: 332px;
+        padding: 40px 28px 38px;
+    }
+
+    .rating-img img {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .review-text {
+        padding: 18px 0 0;
+        text-align: center;
+        max-width: 286px;
+        margin: 0 auto;
+    }
+
+    .review-detail {
+        padding: 0 0 40px;
+    }
+
+    .client-info h3 {
+        font-size: 17.39px;
+        padding: 0 0 8.5px;
+    }
+
+    .client-info p {
+        font-size: 10px;
+    }
+
+    .verification p {
+        font-size: 10.85px;
+        line-height: 111%;
+        letter-spacing: 3.5%;
+        text-transform: capitalize;
+    }
+
+    .verification img {
+        max-width: 18px;
+    }
+
+    .reviewer-img img {
+        max-width: 51px;
+    }
+
+    /* footer-section  */
+
+    .footer-section {
+        background-position: 21% 78%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .brand-text {
+        font-size: 16px;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .trusted-brands {
+        gap: 30px 50px;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+
+    .footer-column ul li a {
+        font-size: 17px;
+        padding: 0 0 28px;
+    }
+
+    .slick-dots {
+        bottom: -85px !important;
+    }
+
+    .slick-dots li button:before {
+        font-size: 17px !important;
+    }
+
+    .slick-dots li.slick-active button:before {
+        width: 25px;
+        height: 25px;
+        top: -3px;
+    }
+}
+
+@media screen and (max-width:426px) {
+
+    .mobile-view {
+        display: flex !important;
+    }
+
+    .header-section {
+        padding: 41px 0 46px;
+    }
+
+    .hero-img.mobile-view {
+        display: block !important;
+    }
+
+    .header-cart {
+        right: 8%;
+    }
+
+    .fa-solid.fa-bag-shopping {
+        display: none;
+    }
+
+    .hero-section {
+        background: none;
+        padding: 0;
+        position: relative;
+    }
+
+    .header-section::before {
+        width: 700px;
+        height: 901px;
+        left: -39%;
+        top: 0;
+        filter: blur(112px);
+        z-index: -1;
+    }
+
+    .section-heading {
+        max-width: 100%;
+    }
+
+    .hero-bg-img::before {
+        content: none;
+    }
+
+    .hero-img img {
+        position: relative;
+        width: 915px;
+        height: 527px;
+        margin: -41px 0 0 -474px;
+        z-index: -1;
+    }
+
+    .achievement-card {
+        gap: 4px;
+    }
+
+    .games-section::before {
+        top: 0;
+        background-position: 51% 100%;
+    }
+
+    .games-section .section-heading {
+        margin: 0;
+    }
+
+    .games-intro .descriptive-font {
+        padding: 12px 16px 0;
+        font-family: Lato;
+        font-size: 16px;
+        line-height: 172%;
+    }
+
+    .games-slider {
+        padding: 25px 0;
+    }
+
+    .virtual-section .container {
+        /* padding: 0 31px; */
+        margin: 0 0 0 31px;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    .virtual-section::before {
+        content: none;
+    }
+
+    .virtual-detail {
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    .virtual-wrapper {
+        padding: 0 55px 0px 0;
+    }
+
+    .section-image {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .section-image img {
+        margin: 0 0 -5px -30px;
+        max-width: 440px;
+        width: 440px;
+    }
+
+    .section-description {
+        max-width: 100%;
+        margin: 0 10px 0 21px;
+    }
+
+    .virtual-detail .section-heading {
+        font-size: 28px;
+        /* max-width: 80%; */
+    }
+
+    .virtual-detail .descriptive-font {
+        max-width: 281px;
+        font-size: 16px;
+        line-height: 185%;
+    }
+
+    /* game-section */
+
+    .games-section .banner-buttons {
+        padding: 0;
+    }
+
+    .games-section::before {
+        width: 133px;
+        height: 844px;
+        left: 0;
+        top: -22%;
+        filter: blur(120px);
+        z-index: -1;
+    }
+
+    .game-showcase::before {
+        content: none;
+    }
+
+    .game-showcase .section-intro {
+        padding: 0 18px;
+    }
+
+    .game-showcase .section-heading {
+        display: inline;
+        max-width: 325px;
+        padding: 0;
+        text-align: left;
+    }
+
+    .section-heading .left-align {
+        left: 70px;
+        top: 40px;
+    }
+
+    .game-item li {
+        list-style: disc;
+        list-style-position: inside;
+        padding: 0 0 0 30px;
+    }
+
+    .game-title {
+        font-size: 20px;
+        padding: 0 0 15px;
+    }
+
+    .game-card-content {
+        padding: 25px 0 0 5px;
+    }
+
+    .game-author img {
+        max-width: 44px;
+        width: 100%;
+    }
+
+    .author-name {
+        font-size: 15px;
+        padding: 0 0 6px;
+    }
+
+    .author-text {
+        font-size: 8px;
+    }
+
+    .live-demo-btn {
+        font-size: 15px;
+        padding: 13.5px 0;
+        margin: 22px -3px 0;
+    }
+
+    .review-footer {
+        padding: 35px 0 0;
+    }
+
+    .game-card {
+        /* margin: 0 29px; */
+        margin: 0 47px;
+    }
+
+
+    /* footer-section */
+
+    .footer-section {
+        padding: 90px 0 0;
+    }
+
+    .footer-section .container {
+        padding: 0 10px 0 28px;
+    }
+
+    .footer-content {
+        gap: 30px;
+    }
+
+    .footer-logo img {
+        max-width: 42px;
+        width: 100%;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 25px 50px;
+    }
+
+    .footer-column ul li a {
+        font-size: 18px;
+    }
+
+    .brand-text {
+        width: 100%;
+        max-width: 83%;
+        font-size: 16px;
+        padding: 15px 0 0;
+    }
+
+    .trusted-brands {
+        gap: 28px 23px;
+        padding: 0px 0 50px;
+    }
+
+    .fa-brands {
+        padding: 7px;
+        font-size: 13px;
+    }
+
+    .trusted-brands img {
+        width: 100%;
+        height: 30px;
+    }
+
+    .trusted-brands img:nth-child(1) {
+        max-width: 85px;
+    }
+
+    .trusted-brands img:nth-child(2) {
+        max-width: 144px;
+    }
+
+    .trusted-brands img:nth-child(3) {
+        max-width: 117px;
+    }
+
+    .trusted-brands img:nth-child(4) {
+        max-width: 117px;
+    }
+
+    .trusted-brands img:nth-child(5) {
+        max-width: 133px;
+    }
+
+
+    img.fa-brands {
+        padding: 7px 10px !important;
+        max-width: 31.33px !important;
+        /* max-width: 8px !important; */
+    }
+
+    .footer-social.mobile-view {
+        padding: 0 0 0 42px;
+    }
+}
+
+@media screen and (max-width:392px) {
+    .game-card {
+        margin: 0 29px;
+    }
+
+
+}
